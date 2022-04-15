@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+
+    {{content|safe}}
+    <block>
+        <form method="GET" action="/MDedit">
+            <input type="submit" value="EDIT">
+            <input type="text" value={{title}} name="t" style="display:none">
+        </form>
+    </block>
+
+{% endblock %}
